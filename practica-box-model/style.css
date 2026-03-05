@@ -1,0 +1,41 @@
+/*Alan Antonio Moreno Contreras*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: peru;
+}
+
+.caja {
+    width: 200px;
+    background-color: lightblue;
+    border: 2px solid blue;
+    margin: 10px;
+    padding: 10px;
+}
+
+#caja1 {
+    width: 300px;
+    background-color: black;
+    border: 2px solid blue;
+    margin: 15px;
+    padding: 12px;
+}
+
+
+#caja2 {
+    width: 230px;
+    background-color: yellow;
+    border: 30px solid blue;
+    margin: 15px;
+    padding: 12px;
+}
+
+#caja3 {
+    /* modificaremos aquí */
+}
