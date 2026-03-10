@@ -38,3 +38,16 @@ h2+p {
 h2~p {
     color: lightgray;
 }
+
+/* Ejercicio 8: Desafío final */
+
+/* Párrafos dentro de .intro */
+.intro p {
+    border-left: 5px solid orange;
+    padding-left: 8px;
+}
+
+/* Enlaces dentro de #contacto que abren en nueva pestaña */
+#contacto a[target="_blank"] {
+    color: green;
+}
