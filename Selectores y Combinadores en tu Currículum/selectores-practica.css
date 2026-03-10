@@ -21,4 +21,5 @@ a[target="_blank"]::after {
 /* Ejercicio 4: Combinador descendiente */
 #experiencia p {
     font-size: 0.9em;
+    color: red;
 }
