@@ -6,3 +6,14 @@ p {
 .destacado {
     background-color: lightyellow;
 }
+
+#foto-perfil {
+    border: 2px dotted red;
+}
+
+/* Ejercicio 3: Selector de atributo */
+a[target="_blank"]::after {
+    content: " 🔗";
+    font-size: 14px;
+    color: red;
+}
