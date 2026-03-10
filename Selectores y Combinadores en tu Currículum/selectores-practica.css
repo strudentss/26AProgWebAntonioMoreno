@@ -17,3 +17,8 @@ a[target="_blank"]::after {
     font-size: 14px;
     color: red;
 }
+
+/* Ejercicio 4: Combinador descendiente */
+#experiencia p {
+    font-size: 0.9em;
+}
