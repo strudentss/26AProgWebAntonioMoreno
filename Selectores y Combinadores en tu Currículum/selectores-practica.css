@@ -1,5 +1,12 @@
-p {
+/* Reset recomendado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Estilo general */
+p {
     color: blue;
 }
 
@@ -7,7 +14,7 @@ p {
     background-color: lightyellow;
 }
 
-#foto-perfil {
+.foto-perfil {
     border: 2px dotted red;
 }
 
@@ -19,13 +26,13 @@ a[target="_blank"]::after {
 }
 
 /* Ejercicio 4: Combinador descendiente */
-#experiencia p {
+.experiencia p {
     font-size: 0.9em;
     color: red;
 }
 
 /* Ejercicio 5: Combinador hijo directo */
-#experiencia>ul>li {
+.experiencia>ul>li {
     list-style-type: square;
 }
 
