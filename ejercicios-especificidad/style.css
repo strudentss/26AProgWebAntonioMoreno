@@ -1,5 +1,17 @@
+/* Reset general recomendado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
 body {
+    height: 100%;
     font-family: Arial, sans-serif;
+}
+
+body {
     margin: 30px;
     background: #f5f5f5;
     color: #222;
@@ -8,6 +20,7 @@ body {
 h1 {
     margin-bottom: 30px;
 }
+
 
 .bloque {
     background: #ffffff;
