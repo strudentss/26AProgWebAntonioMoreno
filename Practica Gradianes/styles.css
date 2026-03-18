@@ -101,3 +101,56 @@ tr.highlight {
     border-image: linear-gradient(to left, #f7971e, #ffd200) 1;
     padding: 20px;
 }
+
+/* 3. Botón */
+.btn {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+/* Hover extra: se agrega debajo */
+.btn:hover {
+    background: linear-gradient(to left, #ff9a9e, #fad0c4);
+}
+
+/* Animación del header: se agrega debajo */
+header {
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: moverGradiente 8s ease infinite;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes moverGradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Overlay dinámico: se agrega debajo */
+.img-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255, 0, 150, 0.6), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.img-container:hover::after {
+    opacity: 1;
+}
