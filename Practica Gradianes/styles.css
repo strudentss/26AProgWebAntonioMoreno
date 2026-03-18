@@ -1,44 +1,41 @@
 /* 4. Fondo general */
 body {
-    background: conic-gradient(from 90deg, red, yellow, green, blue);
+    background: conic-gradient(from 180deg, pink, lightblue, violet, lime);
     min-height: 100vh;
     font-family: Arial, sans-serif;
-
 }
 
 /* 1. Bloques */
 header {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(to left, #ff9a9e, #fad0c4);
     color: white;
     padding: 20px;
     text-align: center;
 }
 
 .caja {
-
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: radial-gradient(circle, #a1c4fd, #c2e9fb);
     padding: 20px;
     margin-top: 10px;
 }
 
 /* 2. Inline */
 .inline {
-    background: radial-gradient(circle, yellow, orange);
+    background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
     padding: 5px;
 }
 
-link-gradiente {
+.link-gradiente {
     display: inline-block;
-    background: linear-gradient(to right, cyan, blue);
+    background: linear-gradient(to left, #ffdde1, #ee9ca7);
     padding: 5px 10px;
     color: white;
     text-decoration: none;
-
 }
 
 /* 3. Botón */
 .btn {
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background: linear-gradient(to right, #00c6ff, #0072ff);
     border: none;
     padding: 10px 20px;
     color: white;
@@ -46,29 +43,27 @@ link-gradiente {
 }
 
 /* 5. Texto gradiente */
-texto-gradiente {
-    background: linear-gradient(45deg, #f06, #f90);
+.texto-gradiente {
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
     -webkit-background-clip: text;
     color: transparent;
 }
 
 /* 6. Imagen overlay */
 .img-container {
-
     position: relative;
     display: inline-block;
 }
 
 .img-container img {
     display: block;
-
 }
 
-.img-container ::after {
+.img-container::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    background: linear-gradient(to top, rgba(255, 0, 150, 0.6), transparent);
 }
 
 /* 7. Lista */
@@ -79,31 +74,30 @@ li {
     margin-bottom: 5px;
 }
 
-li ::before {
-    content: "" !;
+li::before {
+    content: "";
     position: absolute;
     left: 0;
     top: 5px;
     width: 10px;
     height: 10px;
-    background: linear-gradient(45deg, purple, cyan);
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
     border-radius: 50%;
 }
 
 /* 8. Tabla */
 th {
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    background: linear-gradient(to left, #2193b0, #6dd5ed);
     color: white;
-
 }
 
 tr.highlight {
-    background: linear-gradient(to right, #43e97b, #38f9d7);
+    background: linear-gradient(45deg, #cc2b5e, #753a88);
+}
 
-    /* 9. Bordes */
-    .borde-gradiente {
-        border: 5px solid;
-        border-image: linear-gradient(45deg, red, blue) 1;
-        padding: 20px;
-    }
+/* 9. Bordes */
+.borde-gradiente {
+    border: 5px solid;
+    border-image: linear-gradient(to left, #f7971e, #ffd200) 1;
+    padding: 20px;
 }
