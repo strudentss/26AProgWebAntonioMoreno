@@ -10,28 +10,28 @@ body {
 }
 
 .contenedor {
-    width: 1200px;
+    max-width: 1200px;
     margin: 40px auto;
 }
 
 .tabla-objetivo {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: #fff;
     margin-bottom: 35px;
 }
 
 .tabla-objetivo th,
 .tabla-objetivo td {
-    border: 1px solid black;
-    padding: 30px;
+    border: 1px solid #000;
+    padding: 20px;
     text-align: left;
     vertical-align: top;
     font-size: 18px;
 }
 
-.col-pregunta,
-.pregunta {
+.tabla-objetivo th:first-child,
+.tabla-objetivo td:first-child {
     background: yellow;
     font-weight: bold;
     width: 230px;
@@ -41,12 +41,11 @@ body {
     margin-left: 15px;
 }
 
-.bloque-texto h1 {
-    font-size: 34px;
-    margin-bottom: 20px;
-    color: black;
+.bloque-texto h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #000;
 }
-
 
 .bloque-texto p {
     font-size: 18px;
