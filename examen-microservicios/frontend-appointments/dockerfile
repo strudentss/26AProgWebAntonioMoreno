@@ -1,0 +1,10 @@
+FROM oven/bun:1
+
+WORKDIR /app
+
+# Copiar todos los archivos del frontend
+COPY . .
+
+EXPOSE 5175
+
+CMD ["bun", "run", "src/index.ts"]

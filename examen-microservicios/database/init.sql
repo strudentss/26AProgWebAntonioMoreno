@@ -1,0 +1,32 @@
+CREATE TABLE IF NOT EXISTS medicos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    especialidad VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS materiales (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    tipo VARCHAR(100) NOT NULL,
+    cantidad INTEGER NOT NULL,
+    fecha_ingreso TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS citas (
+    id SERIAL PRIMARY KEY,
+    nombre_paciente VARCHAR(100) NOT NULL,
+    nombre_medico VARCHAR(100) NOT NULL,
+    fecha_cita DATE NOT NULL,
+    motivo VARCHAR(200),
+    material_usado VARCHAR(100),
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS equipment (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    tipo VARCHAR(100) NOT NULL,
+    estado VARCHAR(100) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Citas</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>📅 Panel de Citas</h1>
+        <p>Administración de citas médicas</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Registrar nueva cita</h2>
+            <form id="formAppointment" class="formulario">
+                <input type="text" id="nombre_paciente" placeholder="Nombre del paciente" required />
+                <input type="text" id="nombre_medico" placeholder="Nombre del médico" required />
+                <input type="datetime-local" id="fecha_cita" placeholder="Fecha de la cita" required />
+                <input type="text" id="motivo" placeholder="Motivo de la cita" />
+                <input type="text" id="material_usado" placeholder="Material usado (opcional)" />
+                <button type="submit">Registrar cita</button>
+            </form>
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+
+        <section class="card">
+            <h2>Lista de citas</h2>
+            <button id="btnActualizar">Actualizar citas</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Paciente</th>
+                        <th>Médico</th>
+                        <th>Fecha</th>
+                        <th>Motivo</th>
+                        <th>Material Usado</th>
+                        <th>Creación</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaAppointments"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hospital Central © 2026</p>
+    </footer>
+
+    <script type="module" src="./dist/index.js"></script>
+
+</body>
+
+</html>

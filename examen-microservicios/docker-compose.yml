@@ -1,0 +1,96 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: examen_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: examen_microservicios
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend-medics:
+    build: ./backend-medics
+    container_name: backend_medics
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: admin
+      DB_PASSWORD: admin
+      DB_NAME: examen_microservicios
+    depends_on:
+      - postgres
+
+  frontend-medics:
+    build: ./frontend-medics
+    container_name: frontend_medics
+    restart: always
+    ports:
+      - "5171:5171"
+    depends_on:
+      - backend-medics
+
+  # Frontend Equipment
+  frontend-equipment:
+    build: ./frontend-equipment
+    container_name: frontend_equipment
+    restart: always
+    ports:
+      - "5173:5173"              # puerto único para frontend equipment
+    depends_on:
+      - backend-equipment
+
+  # Backend Equipment
+  backend-equipment:
+    build: ./backend-equipment   # aquí estaba mal, apuntaba a ./backend-medics
+    container_name: backend_equipment
+    restart: always
+    ports:
+      - "3003:3003"              # puerto único para equipment
+    environment:
+      PORT: 3003
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: admin
+      DB_PASSWORD: admin
+      DB_NAME: examen_microservicios
+    depends_on:
+      - postgres
+        # Backend Appointments
+  backend-appointments:
+    build: ./backend-appointments
+    container_name: backend_appointments
+    restart: always
+    ports:
+      - "3005:3005"              # puerto único para appointments
+    environment:
+      PORT: 3005
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: admin
+      DB_PASSWORD: admin
+      DB_NAME: examen_microservicios
+    depends_on:
+      - postgres
+
+  # Frontend Appointments
+  frontend-appointments:
+    build: ./frontend-appointments
+    container_name: frontend_appointments
+    restart: always
+    ports:
+      - "5175:5175"              # puerto único para frontend appointments
+    depends_on:
+      - backend-appointments
+
+
+volumes:
+  postgres_data:
